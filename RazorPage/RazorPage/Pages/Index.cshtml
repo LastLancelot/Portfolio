@@ -1,0 +1,31 @@
+﻿@page
+@model RazorPage.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Book list</h1>
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Name of book</th>
+            <th>Author of the book</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.books) {
+            <tr>
+                <td><a asp-page="Details" asp-route-id="@book.Id">@book.Title</a></td>
+                <td>@book.Author</td>
+                <td>@book.price</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+        
