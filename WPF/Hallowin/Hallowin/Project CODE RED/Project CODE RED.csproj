@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Project_CODE_RED</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="4bf1d36cdb4993fcd01769c6161d79ca.jpg" />
+    <None Remove="DS.jpg" />
+    <None Remove="images %281%29.png" />
+    <None Remove="images.png" />
+    <None Remove="png-transparent-pumpkin-halloween-jack-o-lantern-happy-pumpkin-s-food-orange-gourd.png" />
+    <None Remove="pngtree-halloween-pumpkin-lamp-commercial-material-lanternexpressionfestivalpumpkin-png-image_615755.jpg" />
+    <None Remove="Red_Color.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="4bf1d36cdb4993fcd01769c6161d79ca.jpg" />
+    <Resource Include="DS.jpg" />
+    <Resource Include="images (1).png" />
+    <Resource Include="images.png" />
+    <Resource Include="png-transparent-pumpkin-halloween-jack-o-lantern-happy-pumpkin-s-food-orange-gourd.png" />
+    <Resource Include="pngtree-halloween-pumpkin-lamp-commercial-material-lanternexpressionfestivalpumpkin-png-image_615755.jpg" />
+    <Resource Include="Red_Color.jpg" />
+  </ItemGroup>
+
+</Project>

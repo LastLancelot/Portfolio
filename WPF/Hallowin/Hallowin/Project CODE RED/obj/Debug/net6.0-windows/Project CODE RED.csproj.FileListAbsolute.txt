@@ -1,0 +1,21 @@
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED.csproj.AssemblyReference.cache
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED_MarkupCompile.cache
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED_MarkupCompile.lref
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED.g.resources
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\refint\Project CODE RED.dll
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED.pdb
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\bin\Debug\net6.0-windows\Project CODE RED.exe
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\bin\Debug\net6.0-windows\Project CODE RED.deps.json
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\bin\Debug\net6.0-windows\Project CODE RED.runtimeconfig.json
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\bin\Debug\net6.0-windows\Project CODE RED.dll
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\bin\Debug\net6.0-windows\Project CODE RED.pdb
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED.AssemblyInfoInputs.cache
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED.AssemblyInfo.cs
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED.csproj.CoreCompileInputs.cache
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED.dll
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\Project CODE RED.genruntimeconfig.cache
+C:\Users\Volodymyr\Desktop\КР ПЗ\Project CODE RED\Project CODE RED\obj\Debug\net6.0-windows\ref\Project CODE RED.dll
