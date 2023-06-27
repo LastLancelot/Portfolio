@@ -1,0 +1,29 @@
+# Вимірювальні файли
+node_modules/
+dist/
+coverage/
+
+# Конфігураційні файли
+.env
+
+# Час створення/оновлення проекту
+package-lock.json
+yarn.lock
+
+# IDE-специфічні файли
+.vscode/
+.idea/
+
+# Маблони для компіляції
+*.js
+*.js.map
+*.d.ts
+
+# Тимчасові файли
+*.tmp
+*.swp
+*.log
+.DS_Store
+
+# Локальні налаштування IDE
+*.iml
