@@ -2,6 +2,8 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/user/user.entity';
 import { DeleteResult, Repository } from 'typeorm';
+import { userCreateDto } from './user.schema';
+import { validate } from 'class-validator';
 
 @Injectable()
 export class UserService {
@@ -22,7 +24,7 @@ export class UserService {
     return this.usersRepository.delete(id);
   }
 
-  async createUser(createUserSchema: Omit<User, 'id'>): Promise<User> {
+  async createUser(createUserSchema: userCreateDto): Promise<User> {
     const user = await this.usersRepository.findOne({
       where: {
         username: createUserSchema.username,
@@ -31,6 +33,7 @@ export class UserService {
     if (user) {
       throw new HttpException('This username is taken', HttpStatus.BAD_REQUEST);
     }
+
     return this.usersRepository.save(createUserSchema);
   }
 

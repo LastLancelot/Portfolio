@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   HttpCode,
+  HttpException,
   HttpStatus,
   Post,
   Request,
@@ -14,15 +15,15 @@ import {
   ApiBearerAuth,
   ApiBody,
   ApiCreatedResponse,
-  ApiHeader,
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
 import { AuthGuard } from './auth.guard';
-import { type } from 'os';
 import { Public } from './public.declaration';
+import { validate } from 'class-validator';
+import { userCreateDto } from 'src/user/user.schema';
 
-@ApiTags('Posts')
+@ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
@@ -33,16 +34,9 @@ export class AuthController {
   @HttpCode(HttpStatus.OK)
   @Public()
   @Post('login')
+  @HttpCode(200)
   singIn(@Body() singInDto: Record<string, any>) {
     return this.authService.singIn(singInDto.username, singInDto.password);
-  }
-
-  @ApiOperation({ summary: 'Get profile' })
-  @UseGuards(AuthGuard)
-  @ApiBearerAuth()
-  @Get('profile/')
-  getProfile(@Request() req) {
-    return req.user;
   }
 
   @ApiOperation({ summary: 'Create a new user' })
@@ -51,7 +45,12 @@ export class AuthController {
   @Public()
   @Post('register')
   @HttpCode(204)
-  async register(@Body() createUserDto: Omit<User, 'id'>) {
+  async register(@Body() createUserDto: userCreateDto) {
+    const errors = await validate(createUserDto);
+    if (errors.length > 0) {
+      throw new HttpException(errors, HttpStatus.BAD_REQUEST);
+    }
+
     return await this.authService.singUp(createUserDto);
   }
 }

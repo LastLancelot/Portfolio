@@ -2,6 +2,7 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { UserService } from 'src/user/user.service';
 import { JwtService } from '@nestjs/jwt';
 import { User } from 'src/user/user.entity';
+import { userCreateDto } from 'src/user/user.schema';
 
 @Injectable()
 export class AuthService {
@@ -21,7 +22,7 @@ export class AuthService {
     };
   }
 
-  async singUp(createUserSchema: Omit<User, 'id'>): Promise<any> {
+  async singUp(createUserSchema: userCreateDto): Promise<any> {
     return this.userService.createUser(createUserSchema);
   }
 }
