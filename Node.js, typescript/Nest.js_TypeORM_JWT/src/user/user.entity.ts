@@ -1,6 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { CoreEntity } from 'src/aplication/entities/core.entity';
-import { Column, Entity } from 'typeorm';
+import { Task } from 'src/task/task.entity';
+import { Column, Entity, OneToMany } from 'typeorm';
 
 @Entity({ name: 'users' })
 export class User extends CoreEntity {
@@ -32,4 +33,10 @@ export class User extends CoreEntity {
     nullable: false,
   })
   public password: string;
+
+  @OneToMany(() => Task, (tasks) => tasks.owner, {
+    nullable: true,
+    eager: false,
+  })
+  tasks: Task[];
 }

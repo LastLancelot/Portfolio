@@ -21,7 +21,7 @@ import {
 import { AuthGuard } from './auth.guard';
 import { Public } from './public.declaration';
 import { validate } from 'class-validator';
-import { userCreateDto } from 'src/user/user.schema';
+import { userCreateDto } from 'src/user/user.dto';
 
 @ApiTags('Auth')
 @Controller('auth')

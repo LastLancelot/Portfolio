@@ -1,7 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Body, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Task } from 'src/task/task.entity';
 import { DeleteResult, Repository } from 'typeorm';
+import { CreateTaskDto } from './task.dto';
 
 @Injectable()
 export class TaskService {
@@ -10,14 +11,23 @@ export class TaskService {
     private tasksRepository: Repository<Task>,
   ) {}
 
-  findAll(): Promise<Task[]> {
-    return this.tasksRepository.find();
+  async findAllUsersTask(id: number): Promise<Task[]> {
+    return this.tasksRepository.find({
+      where: {
+        ownerId: id,
+      },
+    });
   }
-  findOne(id: number): Promise<Task | null> {
-    return this.tasksRepository.findOneBy({ id });
+  async findOne(id: number): Promise<Task | null> {
+    return await this.tasksRepository.findOneBy({ id });
+  }
+
+  async createTask(@Body() createTaskDto: CreateTaskDto): Promise<Task> {
+    console.log(createTaskDto.ownerId);
+    return await this.tasksRepository.save(createTaskDto);
   }
 
   async remove(id: number): Promise<DeleteResult> {
-    return this.tasksRepository.delete(id);
+    return await this.tasksRepository.delete(id);
   }
 }

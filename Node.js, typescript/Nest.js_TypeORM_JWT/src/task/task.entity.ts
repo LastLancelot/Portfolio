@@ -1,6 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { number } from 'joi';
 import { CoreEntity } from 'src/aplication/entities/core.entity';
-import { Column, Entity } from 'typeorm';
+import { User } from 'src/user/user.entity';
+import { Column, Entity, ManyToOne, OneToOne } from 'typeorm';
 
 @Entity({ name: 'tasks' })
 export class Task extends CoreEntity {
@@ -15,7 +17,7 @@ export class Task extends CoreEntity {
   @ApiProperty()
   @Column({
     type: 'varchar',
-    nullable: false,
+    nullable: true,
     name: 'description',
   })
   public description: string;
@@ -28,4 +30,17 @@ export class Task extends CoreEntity {
     default: false,
   })
   public isComplite: boolean;
+
+  @ManyToOne(() => User, (owner) => owner.tasks, {
+    nullable: false,
+    eager: false,
+  })
+  owner: User;
+
+  @Column({
+    nullable: false,
+    type: 'integer',
+    name: 'ownerId',
+  })
+  ownerId: number;
 }
